@@ -2,13 +2,18 @@
 
 [MATLAB-inspired](https://www.mathworks.com/help/matlab/ref/interp1.html) 1-dimensional data interpolation.
 
-## Import
+## Importing this function
 
-You can import the function using.
+### Node Modules
 
-```javascript
-import interp1 from 'interp1'
-```
+- Run `npm install interp1 --save`
+- Add an import to the npm package `import interp1 from 'interp1';`
+- Then you can use the function in your code.
+
+### UNPKG
+
+- Put the following script tag `<script src='https://unpkg.com/interp1@1.0.2/dist/interp1.umd.js'></script>` in the head of your index.html
+- Then you can use the function in your code.
 
 ## API
 
@@ -29,7 +34,7 @@ It returns an array of interpolated values `vqs`, corresponding to the query val
 ## Example
 
 ```javascript
-vqs = interp1(
+var vqs = interp1(
   [1, 2, 3],
   [-4, 6, 3],
   [1, 1.5, 2.5],
