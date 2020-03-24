@@ -1,8 +1,8 @@
 /*
  * Dependencies.
  */
-const unzip = require('lodash/unzip');
-const zip = require('lodash/zip');
+import unzip from 'lodash.unzip';
+import zip from 'lodash.zip';
 
 /**
  * Method of interpolation.
@@ -117,7 +117,7 @@ export default function interp1(
   }
 
   /* Combine x and v arrays. */
-  const zipped: number[][] = zip(xs, vs);
+  const zipped: number[][] = zip(xs, vs) as number[][];
 
   /* Sort points by independent variabel in ascending order. */
   zipped.sort((a, b) => {
