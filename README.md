@@ -26,6 +26,19 @@ The function takes the following arguments:
 
 It returns an array of interpolated values `vqs`, corresponding to the query values `xqs`.
 
+## Example
+
+```javascript
+vqs = interp1(
+  [1, 2, 3],
+  [-4, 6, 3],
+  [1, 1.5, 2.5],
+  'linear',
+);
+console.log(vqs);
+// expected output: Array [-4, 1, 4.5]
+```
+
 ## NPM scripts
 
 - `npm install`: Install dependencies
