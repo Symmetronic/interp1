@@ -60,30 +60,20 @@ function interpolate(
   index: number,
   method: InterpolationMethod = 'linear',
 ): number {
-  /* Determine previous and next indices. */
-  const prev: number = Math.floor(index);
-  const next: number = Math.ceil(index);
-
-  /* Return exact value. */
-  if (prev === next) return vs[prev];
-
-  /* Interpolate value. */
   switch (method) {
     case 'nearest': {
-      /* Nearest neighbour interpolation. */
-      return (index - prev < 0.5) ? vs[prev] : vs[next];
+      return vs[Math.round(index)]
     }
     case 'next': {
-      /* Next neighbour interpolation. */
-      return vs[next];
+      return vs[Math.ceil(index)];
     }
     case 'previous': {
-      /* Previous neighbour interpolation. */
-      return vs[prev];
+      return vs[Math.floor(index)];
     }
     case 'linear':
     default: {
-      /* Linear interpolation. */
+      const prev: number = Math.floor(index);
+      const next: number = Math.ceil(index);
       const lambda: number = index - prev;
       return (1 - lambda) * vs[prev] + lambda * vs[next];
     }
