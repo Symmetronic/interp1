@@ -12,7 +12,7 @@
 
 ### UNPKG
 
-- Put the following script tag `<script src='https://unpkg.com/interp1@1.0.2/dist/interp1.umd.js'></script>` in the head of your index.html
+- Put the following script tag `<script src='https://unpkg.com/interp1@1.0.3/dist/interp1.umd.js'></script>` in the head of your index.html
 - Then you can use the function in your code.
 
 ## API

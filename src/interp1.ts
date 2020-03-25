@@ -1,13 +1,12 @@
-/*
- * Dependencies.
- */
-import unzip from 'lodash.unzip';
-import zip from 'lodash.zip';
-
 /**
  * Method of interpolation.
  */
 type InterpolationMethod = 'linear' | 'nearest' | 'next' | 'previous';
+
+/**
+ * Point data type.
+ */
+type Point = [number, number];
 
 /**
  * Finds the index of range in which a query value is included in a sorted
@@ -117,7 +116,7 @@ export default function interp1(
   }
 
   /* Combine x and v arrays. */
-  const zipped: number[][] = zip(xs, vs) as number[][];
+  const zipped: Point[] = xs.map((x, index) => [x, vs[index]]);
 
   /* Sort points by independent variabel in ascending order. */
   zipped.sort((a, b) => {
@@ -134,14 +133,18 @@ export default function interp1(
   });
 
   /* Extract sorted x and v arrays */
-  const unzipped: number[][] = unzip(zipped);
-  const sortedX: number[] = unzipped[0];
-  const sortedV: number[] = unzipped[1];
+  let sortedX: number[] = [];
+  let sortedV: number[] = [];
+  for (let i: number = 0; i < zipped.length; i++) {
+    const point: Point = zipped[i];
+    sortedX.push(point[0]);
+    sortedV.push(point[1]);
+  }
 
   /* Interpolate values */
   const yqs: number[] = xqs.map(xq => {
     /* Determine index of range of query value. */
-    let index: number = binaryFindIndex(sortedX, xq);
+    const index: number = binaryFindIndex(sortedX, xq);
 
     /* Check if value lies in interpolation range. */
     if (index === -1) {
