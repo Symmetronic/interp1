@@ -2,7 +2,13 @@
   "name": "interp1",
   "version": "1.0.7",
   "description": "MATLAB-inspired 1-dimensional data interpolation.",
-  "keywords": [],
+  "keywords": [
+    "interpolation",
+    "linear",
+    "nearest neighbor",
+    "sampling",
+    "scientific"
+  ],
   "main": "dist/interp1.umd.js",
   "module": "dist/interp1.es5.js",
   "typings": "dist/types/interp1.d.ts",
