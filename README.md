@@ -10,9 +10,9 @@
 - Add an import to the npm package `import interp1 from 'interp1';`
 - Then you can use the function in your code.
 
-### UNPKG
+### CDN
 
-- Put the following script tag `<script src='https://unpkg.com/interp1@1.0.8/dist/interp1.umd.js'></script>` in the head of your index.html
+- Put the following script tag `<script src='https://cdn.jsdelivr.net/npm/interp1@1/dist/interp1.umd.min.js'></script>` in the head of your index.html
 - Then you can use the function in your code.
 
 ## API
