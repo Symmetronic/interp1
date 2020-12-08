@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/Symmetronic/interp1/workflows/build/badge.svg)](https://github.com/Symmetronic/interp1/actions?query=workflow%3Abuild+branch%3Amaster) [![Coverage Status](https://coveralls.io/repos/github/Symmetronic/interp1/badge.svg?branch=master)](https://coveralls.io/github/Symmetronic/interp1?branch=master) [![GitHub License](https://img.shields.io/github/license/Symmetronic/interp1)](https://github.com/Symmetronic/interp1/blob/master/LICENSE) [![NPM Version](https://img.shields.io/npm/v/interp1)](https://www.npmjs.com/package/interp1) [![Monthly Downloads](https://img.shields.io/npm/dm/interp1)](https://npmcharts.com/compare/interp1?minimal=true)
+
 # interp1
 
 [MATLAB-inspired](https://www.mathworks.com/help/matlab/ref/interp1.html) 1-dimensional data interpolation.
