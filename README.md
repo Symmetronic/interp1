@@ -8,7 +8,7 @@
 
 ### Node Modules
 
-- Run `npm install interp1 --save`
+- Run `npm install interp1`
 - Add an import to the npm package `import interp1 from 'interp1';`
 - Then you can use the function in your code.
 
