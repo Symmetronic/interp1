@@ -83,7 +83,7 @@ describe('interp1', () => {
     const xs: number[] = [-3, 0, 4, 5];
     const vs: number[] = [9, -2, 0, 3];
     const xqs: number[] = [-3, -1.5, 0, 2, 4, 5];
-    expect(interp1(xs, vs, xqs)).toEqual(interp1(xs, vs, xqs, 'linear'));
+    expect(interp1(xs, vs, xqs)).toEqual(interp1(xs, vs, xqs));
   });
 
   it('does not require the sample points to be in order', () => {

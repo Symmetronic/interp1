@@ -58,7 +58,7 @@ function binaryFindIndex(
 function interpolate(
   vs: ReadonlyArray<number>,
   index: number,
-  method: InterpolationMethod = 'linear',
+  method: InterpolationMethod,
 ): number {
   switch (method) {
     case 'nearest': {
