@@ -16,7 +16,7 @@ type Point = [number, number];
  * @return    Index of range plus percentage to next index. 
  */
 function binaryFindIndex(
-  xs: number[],
+  xs: ReadonlyArray<number>,
   xq: number,
 ): number {
   /* Special case of only one element in array. */
@@ -56,7 +56,7 @@ function binaryFindIndex(
  * @return        Interpolated value.
  */
 function interpolate(
-  vs: number[],
+  vs: ReadonlyArray<number>,
   index: number,
   method: InterpolationMethod = 'linear',
 ): number {
@@ -89,9 +89,9 @@ function interpolate(
  * @return        Interpolated values vq(xq) with length equal to xqs.
  */
 export default function interp1(
-  xs: number[],
-  vs: number[],
-  xqs: number[],
+  xs: ReadonlyArray<number>,
+  vs: ReadonlyArray<number>,
+  xqs: ReadonlyArray<number>,
   method: InterpolationMethod = 'linear',
 ): number[] {
   /*
@@ -123,8 +123,8 @@ export default function interp1(
   });
 
   /* Extract sorted x and v arrays */
-  let sortedX: number[] = [];
-  let sortedV: number[] = [];
+  const sortedX: number[] = [];
+  const sortedV: number[] = [];
   for (let i: number = 0; i < zipped.length; i++) {
     const point: Point = zipped[i];
     sortedX.push(point[0]);
@@ -132,7 +132,7 @@ export default function interp1(
   }
 
   /* Interpolate values */
-  const yqs: number[] = xqs.map(xq => {
+  const yqs: ReadonlyArray<number> = xqs.map(xq => {
     /* Determine index of range of query value. */
     const index: number = binaryFindIndex(sortedX, xq);
 
@@ -149,5 +149,5 @@ export default function interp1(
   });
 
   /* Return result. */
-  return yqs;
+  return yqs.slice();
 }
