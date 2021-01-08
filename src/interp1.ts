@@ -1,7 +1,7 @@
 /**
  * Method of interpolation.
  */
-type InterpolationMethod = 'linear' | 'nearest' | 'next' | 'previous';
+export type InterpolationMethod = 'linear' | 'nearest' | 'next' | 'previous';
 
 /**
  * Point data type.
