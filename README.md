@@ -55,3 +55,7 @@ console.log(vqs);
 - `npm run test:prod`: Run linting and generate coverage
 - `npm run build`: Generate bundles and typings, create docs
 - `npm run lint`: Lints code
+
+## Related project
+
+[exact-linspace] is a MATLAB-inspired function to create linearly spaced values.
