@@ -58,4 +58,4 @@ console.log(vqs);
 
 ## Related project
 
-[exact-linspace] is a MATLAB-inspired function to create linearly spaced values.
+[exact-linspace](https://github.com/Symmetronic/exact-linspace) is a MATLAB-inspired function to create linearly spaced values.
