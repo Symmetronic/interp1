@@ -13,7 +13,6 @@ module.exports = {
     "eslint-plugin-jsdoc",
     "eslint-plugin-react",
     "@typescript-eslint",
-    "@typescript-eslint/tslint",
   ],
   rules: {
     "@typescript-eslint/await-thenable": "error",
@@ -142,13 +141,5 @@ module.exports = {
       },
     ],
     "use-isnan": "error",
-    "@typescript-eslint/tslint/config": [
-      "error",
-      {
-        rules: {
-          "strict-type-predicates": true,
-        },
-      },
-    ],
   },
 };
