@@ -11,6 +11,7 @@ type Point = [number, number];
 /**
  * Finds the index of range in which a query value is included in a sorted
  * array with binary search.
+ * 
  * @param  xs Array sorted in ascending order.
  * @param  xq Query value.
  * @return    Index of range plus percentage to next index. 
@@ -50,6 +51,7 @@ function binaryFindIndex(
 
 /**
  * Interpolates a value.
+ * 
  * @param  vs     Array of values to interpolate between.
  * @param  index  Index of new to be interpolated value.
  * @param  method Kind of interpolation. Can be 'linear', 'nearest', 'next' or 'previous'.
@@ -82,6 +84,7 @@ function interpolate(
 
 /**
  * Interpolates values linearly in one dimension.
+ * 
  * @param  xs     Array of independent sample points.
  * @param  vs     Array of dependent values v(x) with length equal to xs.
  * @param  xqs    Array of query points.
