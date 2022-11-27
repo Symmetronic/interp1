@@ -1,6 +1,6 @@
 {
   "name": "interp1",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "MATLAB-inspired 1-dimensional data interpolation.",
   "keywords": [
     "interpolation",
